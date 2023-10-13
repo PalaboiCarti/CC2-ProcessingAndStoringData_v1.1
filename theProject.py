@@ -62,9 +62,9 @@ def user_profile():
         user_hobbies = get_hobbies()
         user_skills = get_skills()
     
-        print("~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~")
         print("Ｐｒｏｆｉｌｅ")
-        print("~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~")
         print(f"( ๑‾̀◡‾́)σ Hello! My name is {name}!")
         print(f"==> I am {age} years old.")
         print(f"==> My degree is {degree}.")
@@ -74,7 +74,7 @@ def user_profile():
     display_profile()
 
 
-def itemsList():   
+def item_list():   
     def initial_list(chores):
         df = pd.DataFrame({'House Chores': chores})
         print("Initial List:")
@@ -91,6 +91,9 @@ def itemsList():
         print(df)
     
     def main():
+        print("~~~~~~~~~~~~~~~~~")
+        print("Ｙｏｕｒ Ｌｉｓｔ")
+        print("~~~~~~~~~~~~~~~~~")
         # Items list
         chores = ['wash dishes', 'buy dish soap', 'think about life', 'wash a random thing', 'tell your mom you love her']
     
@@ -103,7 +106,7 @@ def itemsList():
 
 #set a
 
-    def setA():
+    def set_A():
         def square():
             while True:
                 try:
@@ -206,9 +209,9 @@ def itemsList():
         setA()
         
 def main():
-    userProfile()
-    itemsList()
-    setA()
+    user_profile()
+    print("~~~~~~~~~~~~~~~")
+    item_list()
+    set_A()
 
 main()
-
