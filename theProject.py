@@ -99,6 +99,7 @@ def item_list():
     
         initial_list(chores)
         add_to_list(chores)
+        print("~~~~~~~~~~~~~~~~~")
     
     if __name__ == "__main__":
         main()
@@ -206,12 +207,13 @@ def item_list():
         main()
     
     if __name__ == "__main__":
-        setA()
+        set_A()
         
 def main():
     user_profile()
-    print("~~~~~~~~~~~~~~~")
+    print("~~~~~~~~~~~~~~~~~")
     item_list()
+    print("~~~~~~~~~~~~~~~~~")
     set_A()
 
 main()
