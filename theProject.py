@@ -107,107 +107,105 @@ def item_list():
 
 #set a
 
-    def set_A():
-        def square():
-            while True:
-                try:
-                    sideLength = float(input("Enter a value for a side length: "))
-                    area = sideLength ** 2
-                    print(f"The area of the square is: {area:.2f}")
-                    return
-                except ValueError:
-                    print("Error: Please enter a valid numeric value for the side length.")
-        
-        def triangle():
-            while True: 
-                try:
-                    width = float(input("Enter a value for width: "))
-                    height = float(input("Enter a value for height: "))
-                    area = 0.5 * width * height
-                    print(f"The area of the triangle is: {area:.2f}")
-                    return
-                except ValueError:
-                    print("Error: Please enter valid numeric values for the width and height.")
-        
-        def circle():
-            while True:
-                try:
-                    radius = float(input("Enter a value for radius: "))
-                    area = math.pi * (radius ** 2)
-                    print(f"The area of the circle is: {area:.2f}")
-                    return
-                except ValueError:
-                    print("Error: Please enter a valid numeric value for the radius.")
-        
-        def rectangle():
-            while True:
-                try:
-                    width = float(input("Enter a value for width: "))
-                    height = float(input("Enter a value for height: "))
-                    area = width * height
-                    print(f"The area of the rectangle is: {area:.2f}")
-                    return
-                except ValueError:
-                    print("Error: Please enter valid numeric values for width and height.")
-        
-        def trapezoid():
-            while True:
-                try:
-                    base1 = float(input("Enter a value for the first base: "))
-                    base2 = float(input("Enter a value for the second base: "))
-                    height = float(input("Enter a value for height: "))
-                    area = 0.5 * (base1 + base2) * height
-                    print(f"The area of the trapezoid is: {area:.2f}")
-                    return
-                except ValueError:
-                    print("Error: Please enter valid numeric values for the bases and height.")
-        
-        def retry():
-            select = input("Would you like to make another conversion? (y/n): ").strip().lower()
-            if select == "y":
-                return True
-            elif select == "n":
-                print("Alright. See you again.")
-                return False
-            else:
-                print("Error: Invalid input. Please enter 'y' or 'n'.")
-                return retry()
-        
-        def shapeSelect():
-            while True:
-                try:
-                    select = int(input("""Select your shape
-    1. Square
-    2. Triangle
-    3. Circle
-    4. Rectangle
-    5. Trapezoid
-    """))
-                    if select in [1, 2, 3, 4, 5]:
-                        if select == 1:
-                            square()
-                        elif select == 2:
-                            triangle()
-                        elif select == 3:
-                            circle()
-                        elif select == 4:
-                            rectangle()
-                        elif select == 5:
-                            trapezoid()
-                        if not retry():
-                            break
-                    else:
-                        print("Error: Invalid input. Please enter a number between 1 and 5.")
-                except ValueError:
-                    print("Error: Invalid input. Please enter a valid number between 1 and 5.")
-        
-        def main():
-            shapeSelect()
-        
-        main()
+def set_A():
+    def square():
+        while True:
+            try:
+                sideLength = float(input("Enter a value for a side length: "))
+                area = sideLength ** 2
+                print(f"The area of the square is: {area:.2f}")
+                return
+            except ValueError:
+                print("Error: Please enter a valid numeric value for the side length.")
     
-    if __name__ == "__main__":
-        set_A()
+    def triangle():
+        while True: 
+            try:
+                width = float(input("Enter a value for width: "))
+                height = float(input("Enter a value for height: "))
+                area = 0.5 * width * height
+                print(f"The area of the triangle is: {area:.2f}")
+                return
+            except ValueError:
+                print("Error: Please enter valid numeric values for the width and height.")
+    
+    def circle():
+        while True:
+            try:
+                radius = float(input("Enter a value for radius: "))
+                area = math.pi * (radius ** 2)
+                print(f"The area of the circle is: {area:.2f}")
+                return
+            except ValueError:
+                print("Error: Please enter a valid numeric value for the radius.")
+    
+    def rectangle():
+        while True:
+            try:
+                width = float(input("Enter a value for width: "))
+                height = float(input("Enter a value for height: "))
+                area = width * height
+                print(f"The area of the rectangle is: {area:.2f}")
+                return
+            except ValueError:
+                print("Error: Please enter valid numeric values for width and height.")
+    
+    def trapezoid():
+        while True:
+            try:
+                base1 = float(input("Enter a value for the first base: "))
+                base2 = float(input("Enter a value for the second base: "))
+                height = float(input("Enter a value for height: "))
+                area = 0.5 * (base1 + base2) * height
+                print(f"The area of the trapezoid is: {area:.2f}")
+                return
+            except ValueError:
+                print("Error: Please enter valid numeric values for the bases and height.")
+    
+    def retry():
+        select = input("Would you like to make another conversion? (y/n): ").strip().lower()
+        if select == "y":
+            return True
+        elif select == "n":
+            print("Alright. See you again.")
+            return False
+        else:
+            print("Error: Invalid input. Please enter 'y' or 'n'.")
+            return retry()
+    
+    def shapeSelect():
+        while True:
+            try:
+                select = int(input("""Select your shape
+1. Square
+2. Triangle
+3. Circle
+4. Rectangle
+5. Trapezoid
+"""))
+                if select in [1, 2, 3, 4, 5]:
+                    if select == 1:
+                        square()
+                    elif select == 2:
+                        triangle()
+                    elif select == 3:
+                        circle()
+                    elif select == 4:
+                        rectangle()
+                    elif select == 5:
+                        trapezoid()
+                    if not retry():
+                        break
+                else:
+                    print("Error: Invalid input. Please enter a number between 1 and 5.")
+            except ValueError:
+                print("Error: Invalid input. Please enter a valid number between 1 and 5.")
+    
+    def main():
+        shapeSelect()
+    
+    main()
+
         
 def main():
     user_profile()
