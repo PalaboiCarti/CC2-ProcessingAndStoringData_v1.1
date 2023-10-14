@@ -1,6 +1,8 @@
+#version 1.1
+#oct/14/2023 09:31
 import math
 import pandas as pd
-#user profile
+
 
 def user_profile():
     def get_name():
