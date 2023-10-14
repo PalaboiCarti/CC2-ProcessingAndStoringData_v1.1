@@ -90,7 +90,7 @@ def item_list():
         print("~~~~~~~~~~~~~~~~~")
         print(df)
     
-    def main():
+    def display_list():
         print("~~~~~~~~~~~~~~~~~")
         print("Ｙｏｕｒ Ｌｉｓｔ")
         print("~~~~~~~~~~~~~~~~~")
@@ -101,8 +101,9 @@ def item_list():
         add_to_list(chores)
         print("~~~~~~~~~~~~~~~~~")
     
-    if __name__ == "__main__":
-        main()
+    display_list()
+    
+    
 
 
 #set a
@@ -173,9 +174,12 @@ def set_A():
             print("Error: Invalid input. Please enter 'y' or 'n'.")
             return retry()
     
-    def shapeSelect():
+    def select_shape():
         while True:
             try:
+                print("~~~~~~~~~~~~~~~~~~~~~~~")
+                print("Ｓｈａｐｅ Ｓｅｌｅｃｔ")
+                print("~~~~~~~~~~~~~~~~~~~~~~~")
                 select = int(input("""Select your shape
 1. Square
 2. Triangle
@@ -201,10 +205,7 @@ def set_A():
             except ValueError:
                 print("Error: Invalid input. Please enter a valid number between 1 and 5.")
     
-    def main():
-        shapeSelect()
-    
-    main()
+    select_shape()
 
         
 def main():
@@ -213,5 +214,6 @@ def main():
     item_list()
     print("~~~~~~~~~~~~~~~~~")
     set_A()
+    print("~~~~~~~~~~~~~~~~~")
 
 main()
